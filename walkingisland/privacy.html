@@ -34,8 +34,11 @@
 <ul>
   <li><b>읽기만 합니다.</b> 앱은 건강에 아무것도 쓰지 않으며, 걸음 수 외의 건강·피트니스
       항목(심박수, 수면, 운동 기록 등)은 요청하지도 읽지도 않습니다.</li>
-  <li>읽은 값은 <b>기기 밖으로 나가지 않습니다.</b> 아이폰 만보기가 놓친 걸음이 얼마인지
-      계산하는 데에만 쓰이고, 서버로 전송되는 것은 여전히 주간 합계뿐입니다(아래 3항).</li>
+  <li>건강에서 읽은 <b>기록 자체는 서버로 보내지 않습니다.</b> 읽은 값은 아이폰 만보기가
+      놓친 걸음이 얼마인지 계산하는 데에만 쓰입니다. 다만 그렇게 채워진 걸음은 다른 걸음과
+      똑같이 다뤄지므로, <b>한 주의 합계</b>에는 함께 담겨 랭킹 서버로 전송되고(아래 3항),
+      계정을 연동하셨다면 <b>날짜별 걸음 기록</b>이 백업에 포함됩니다(아래 4항).
+      건강 앱의 다른 항목이나 원본 기록이 전송되는 일은 없습니다.</li>
   <li>건강 데이터는 <b>광고에 쓰지 않으며</b> 제3자에게 전달하지 않습니다.</li>
   <li>권한을 허용하지 않으셔도 앱은 그대로 동작합니다. 이 경우 아이폰 만보기가 읽은
       걸음만 반영됩니다.</li>
@@ -149,9 +152,12 @@ the following:</p>
 <ul>
   <li><b>We only read.</b> The app writes nothing to Health, and it neither requests nor reads
       any health or fitness data other than step count (no heart rate, sleep, or workouts).</li>
-  <li>What we read <b>never leaves your device.</b> It is used only to work out how many steps
-      the iPhone's pedometer missed; what reaches our server is still the weekly total only
-      (see section 3).</li>
+  <li>The Health records themselves are <b>never sent to our server.</b> What we read is used only
+      to work out how many steps the iPhone's pedometer missed. Steps filled in this way are then
+      treated like any other steps, so they are included in the <b>weekly total</b> sent for the
+      leaderboard (section 3) and, if you have linked an account, in the <b>daily step history</b>
+      contained in your backup (section 4). No other Health data and no raw Health records are
+      ever transmitted.</li>
   <li>Health data is <b>never used for advertising</b> and is never shared with third parties.</li>
   <li>The app works without this permission. In that case only the steps the iPhone's own
       pedometer recorded are counted.</li>
